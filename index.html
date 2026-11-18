@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PEAR: Phrase-Based Hand-Object Interaction Anticipation. From one first-person image and a verb-noun phrase, PEAR anticipates both the interaction intention and the manipulation that follows; with the EGO-HOIP dataset.">
+  <meta name="keywords" content="PEAR, EGO-HOIP, hand-object interaction anticipation, egocentric vision, interaction hotspots, hand trajectory, hand pose">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PEAR: Phrase-Based Hand-Object Interaction Anticipation</title>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+<!-- Icons: Font Awesome Free 5.15.1 (https://fontawesome.com), CC BY 4.0. -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PEAR: Phrase-Based Hand-Object Interaction Anticipation</h1>
+          <h2 class="title is-4 publication-venue">Science China Information Sciences (SCIS), 2025</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a class="no-link">Zichen Zhang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=FnQQTeoAAAAJ&amp;hl=en">Hongchen Luo</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=UI5_qZcAAAAJ&amp;hl=en">Wei Zhai</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=K7rTHNcAAAAJ&amp;hl=en">Yang Cao</a><sup>1,3</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=gTWIZmEAAAAJ&amp;hl=en">Yu Kang</a><sup>1,3</sup></span>
+          </div>
+          <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+            <span class="author-block"><sup>1</sup>University of Science and Technology of China&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>2</sup>Northeastern University&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>3</sup>Institute of Artificial Intelligence, Hefei Comprehensive National Science Center</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="https://doi.org/10.1007/s11432-024-4405-4">
+                  <span class="icon"><svg class="fa-inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"/></svg></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="https://github.com/Derek0907/PEAR_release">
+                  <span class="icon"><svg class="fa-inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="https://github.com/Derek0907/PEAR_release#3">
+                  <span class="icon"><svg class="fa-inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"/></svg></span>
+                  <span>EGO-HOIP Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/task.png" alt="Phrase-based hand-object interaction anticipation" style="width: 88%;">
+      <p class="figure-caption" style="text-align: center;">
+        <b>Phrase-based hand-object interaction anticipation.</b> Given an image of the pre-interaction scene and a
+        phrase, PEAR anticipates the interaction process over a period of time: the interaction intention (hand motion
+        trend and interaction hotspots) and the interaction manipulation (manipulation trajectory and hand pose with
+        contact).
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            First-person hand-object interaction anticipation aims to predict the interaction process over a
+            forthcoming period based on current scenes and prompts. This capability is crucial for embodied
+            intelligence and human-robot collaboration. The complete interaction process involves both pre-contact
+            interaction intention (i.e., hand motion trends and interaction hotspots) and post-contact interaction
+            manipulation (i.e., manipulation trajectories and hand poses with contact). Existing research typically
+            anticipates only interaction intention while neglecting manipulation, resulting in incomplete predictions
+            and an increased likelihood of intention errors due to the lack of manipulation constraints. To address
+            this, we propose a novel model, <b>PEAR</b> (Phrase-Based Hand-Object Interaction
+            Anticipation), which jointly anticipates interaction intention and manipulation. To handle
+            uncertainties in the interaction process, we employ a twofold approach. Firstly, we perform
+            cross-alignment of verbs, nouns, and images to reduce the diversity of hand movement patterns and object
+            functional attributes, thereby mitigating intention uncertainty. Secondly, we establish bidirectional
+            constraints between intention and manipulation using dynamic integration and residual connections,
+            ensuring consistency among elements and thus overcoming manipulation uncertainty. To rigorously evaluate
+            the performance of the proposed model, we collect a new task-relevant dataset, <b>EGO-HOIP</b>, with
+            comprehensive annotations. Extensive experimental results demonstrate the superiority of our method.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Two Kinds of Uncertainty</h2>
+        <div class="content has-text-justified">
+          <p>
+            The same scene admits many interactions, and the same intention can be carried out in many ways. PEAR
+            treats the two sources of uncertainty separately: a phrase narrows down what the hand is going to do and
+            where, and the manipulation that follows is tied to that intention in both directions.
+          </p>
+        </div>
+        <div class="figure-block">
+          <img src="./static/images/motivation.png" alt="Motivation" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Motivation.</b> (a) Cross-aligning nouns, verbs and images reduces the scope of the intention elements and
+          overcomes intention uncertainty. (b) Manipulation elements are derived through the dynamic integration of
+          the intention elements, and the initial intention is refined by the manipulation in turn, which mitigates
+          manipulation uncertainty.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="figure-block">
+          <img src="./static/images/method.png" alt="PEAR pipeline" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>PEAR pipeline.</b> The model takes an image and a phrase as inputs and anticipates the future interaction
+          elements. It consists of four components: an image-phrase fusion module, an interaction intention excavation
+          module, an interaction manipulation extraction module, and a probabilistic modeling prediction module.
+        </p>
+        <div class="figure-block" style="margin-top: 1.6rem;">
+          <img src="./static/images/method2.png" alt="Details of PEAR's structure" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Details of the structure.</b> (a) The DEQ extraction model takes the hand motion feature and the
+          interaction hotspots feature as inputs and produces a fused feature in the equilibrium state, which serves
+          as the manipulation feature. (b) In the probabilistic modeling prediction module, hand motion trends and
+          manipulation trajectories use chain-structured C-VAEs, and the hand pose decoder incorporates the parametric
+          MANO model.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">EGO-HOIP Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            EGO-HOIP is built from first-person hand-object interaction videos of EGO4D. It contains over 5,000
+            scene-prompt pairs with more than 90 verbs and 600 nouns, and over 15k annotations. Hand trajectories
+            before and after contact and 3D hand poses are generated automatically; interaction hotspots and hand
+            contact are annotated manually.
+          </p>
+        </div>
+        <div class="figure-block">
+          <img src="./static/images/dataset.png" alt="EGO-HOIP dataset" style="width: 92%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>EGO-HOIP.</b> (a) Data and annotations: each sample comprises an interaction prompt phrase and a
+          pre-interaction image. (b) Examples of verb-noun pairings in the phrases. (c), (d) Word clouds of nouns and
+          verbs.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="figure-block">
+          <img src="./static/images/table_intention.png" alt="Results of interaction intention anticipation" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Interaction intention anticipation</b> (hand motion trend and interaction hotspots), compared with
+          video-based and image-and-text-based methods.
+        </p>
+        <div class="figure-block" style="margin-top: 1.6rem;">
+          <img src="./static/images/table_manipulation.png" alt="Results of interaction manipulation anticipation" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Interaction manipulation anticipation</b> (hand pose with contact and manipulation trajectory).
+        </p>
+        <div class="figure-block" style="margin-top: 1.6rem;">
+          <img src="./static/images/viz_1.png" alt="Visualization results" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Visualization.</b> Left of each sample: the predicted complete hand trajectory and interaction hotspots.
+          Right: the predicted hand pose with contact from two views. Yellow and red denote the right- and left-hand
+          motion trends, purple and green the right and left manipulation trajectories; contact areas are marked in
+          red on the hand mesh.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Changing the Phrase, the Image, and the Sample</h2>
+        <div class="figure-block">
+          <img src="./static/images/dif_txt.png" alt="Different phrases" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Different phrases.</b> The input image is fixed and the phrase is varied.
+        </p>
+        <div class="figure-block" style="margin-top: 1.6rem;">
+          <img src="./static/images/dif_img.png" alt="Different images" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Different images.</b> The phrase is kept and the image is changed.
+        </p>
+        <div class="figure-block" style="margin-top: 1.6rem;">
+          <img src="./static/images/uncertainty.png" alt="Uncertainty study" style="width: 100%;" loading="lazy">
+        </div>
+        <p class="figure-caption">
+          <b>Uncertainty.</b> Inference is repeated with identical inputs to show the variation introduced by the
+          probabilistic modeling decoder.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhang2025pear,
+  title   = {PEAR: Phrase-Based Hand-Object Interaction Anticipation},
+  author  = {Zhang, Zichen and Luo, Hongchen and Zhai, Wei and Cao, Yang and Kang, Yu},
+  journal = {Science China Information Sciences},
+  volume  = {68},
+  number  = {5},
+  pages   = {150209},
+  year    = {2025},
+  doi     = {10.1007/s11432-024-4405-4}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. The page layout follows the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

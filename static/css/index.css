@@ -1,0 +1,155 @@
+/* ART project page. Layout follows the Nerfies-style template used by the group's earlier pages. */
+body {
+  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.publication-title,
+.publication-authors,
+.teaser {
+  font-family: 'Google Sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', sans-serif;
+}
+
+.publication-venue {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.publication-authors a.no-link {
+  color: #363636 !important;
+  cursor: default;
+  text-decoration: none;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.button .soon {
+  font-size: 0.72em;
+  opacity: 0.75;
+  margin-left: 0.4em;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser img,
+.figure-block img {
+  display: block;
+  margin: 0 auto;
+}
+
+.figure-block {
+  margin: 1.2rem auto 0.4rem auto;
+}
+
+.figure-caption {
+  font-size: 1rem;
+  color: #4a4a4a;
+  text-align: justify;
+  margin-top: 0.8rem;
+}
+
+.section-title-center {
+  text-align: center;
+}
+
+/* key numbers */
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.2rem 0 0.4rem 0;
+}
+
+.stat {
+  flex: 1 1 130px;
+  max-width: 190px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 0.9rem 0.6rem;
+  text-align: center;
+}
+
+.stat .num {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #c0392b;
+  line-height: 1.2;
+}
+
+.stat .lab {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+}
+
+/* animated results */
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  background: #fff;
+}
+
+.results-carousel .item img,
+.results-carousel .item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.results-carousel .item .item-label {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.35rem 0.2rem 0.45rem 0.2rem;
+  color: #363636;
+}
+
+.anim-legend {
+  text-align: center;
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-top: 0.8rem;
+}
+
+.release-list li {
+  margin-bottom: 0.3rem;
+}
+
+pre code {
+  font-size: 0.85rem;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+
+.fa-inline {
+  height: 1em;
+  width: auto;
+  vertical-align: -0.125em;
+}
